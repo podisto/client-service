@@ -21,7 +21,7 @@ public class ClientServiceApplication implements CommandLineRunner {
 	}
 
 	@Override
-	public void run(String... args) {
+	public void run(String... args) throws Exception {
 		String url = "http://localhost:8082/private";
 		String result = restTemplate.getForObject(url, String.class);
 		System.out.println("Result == " +result);
